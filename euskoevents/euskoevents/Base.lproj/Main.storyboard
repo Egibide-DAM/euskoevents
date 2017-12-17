@@ -27,7 +27,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="1i0-02-A1Z" kind="show" id="tzJ-Zv-LB1"/>
+                                    <segue destination="f9z-xs-caH" kind="show" identifier="verItem" id="RiS-Fk-o4E"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -82,31 +82,78 @@
             </objects>
             <point key="canvasLocation" x="893.60000000000002" y="964.76761619190415"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="VA3-gK-U1F">
+        <!--Item View Controller-->
+        <scene sceneID="aHf-Eg-zEs">
             <objects>
-                <viewController id="1i0-02-A1Z" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HP5-2s-REy">
+                <viewController id="f9z-xs-caH" customClass="ItemViewController" customModule="euskoevents" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TZt-SO-yUb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NfW-Qh-kSk">
-                                <rect key="frame" x="0.0" y="515" width="375" height="152"/>
-                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMx-ZH-806">
+                                <rect key="frame" x="16" y="133" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Of-jV-D7j">
+                                <rect key="frame" x="128" y="133" width="231" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wau-lo-Mcd">
+                                <rect key="frame" x="16" y="162" width="47" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wv-jT-6gd">
+                                <rect key="frame" x="128" y="162" width="231" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Territorio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiR-ZF-ayZ">
+                                <rect key="frame" x="16" y="191" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOx-Ky-HPQ">
+                                <rect key="frame" x="128" y="191" width="231" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pP-Z4-ACO">
+                                <rect key="frame" x="16" y="231" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ver en la Web"/>
+                                <connections>
+                                    <action selector="irWeb:" destination="f9z-xs-caH" eventType="touchUpInside" id="cvD-81-Xrb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="NfW-Qh-kSk" firstAttribute="bottom" secondItem="FEL-Jk-ZPn" secondAttribute="bottom" id="7Qq-mA-Xt4"/>
-                            <constraint firstItem="NfW-Qh-kSk" firstAttribute="leading" secondItem="FEL-Jk-ZPn" secondAttribute="leading" id="9Ke-N7-kgJ"/>
-                            <constraint firstItem="NfW-Qh-kSk" firstAttribute="trailing" secondItem="FEL-Jk-ZPn" secondAttribute="trailing" id="cEM-ZI-XVN"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="FEL-Jk-ZPn"/>
+                        <viewLayoutGuide key="safeArea" id="WVa-gP-Yv3"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tGl-wt-1AC"/>
+                    <connections>
+                        <outlet property="botonWeb" destination="4pP-Z4-ACO" id="Z5p-z4-vGp"/>
+                        <outlet property="fecha" destination="0wv-jT-6gd" id="BWV-hr-6tJ"/>
+                        <outlet property="nombre" destination="7Of-jV-D7j" id="3Dl-PM-iJe"/>
+                        <outlet property="territorio" destination="bOx-Ky-HPQ" id="oR3-TE-fg7"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jgU-nt-Wu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VnU-jT-qwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1981.5999999999999" y="176.76161919040482"/>
+            <point key="canvasLocation" x="1957.5999999999999" y="176.76161919040482"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="f23-cb-Gfu">
@@ -129,7 +176,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ver mapa de eventos"/>
                                 <connections>
-                                    <segue destination="Sc0-vx-P4N" kind="show" id="vSe-JG-nP8"/>
+                                    <segue destination="Sc0-vx-P4N" kind="show" identifier="verMapa" id="vSe-JG-nP8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoT-Sn-6h2" userLabel="Todos2">

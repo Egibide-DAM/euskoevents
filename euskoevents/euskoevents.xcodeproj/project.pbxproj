@@ -16,6 +16,7 @@
 		7112C2C01FDCB8EA00063716 /* euskoeventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7112C2BF1FDCB8EA00063716 /* euskoeventsTests.swift */; };
 		7112C2CB1FDCB8EA00063716 /* euskoeventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7112C2CA1FDCB8EA00063716 /* euskoeventsUITests.swift */; };
 		7112C2D91FDCBD0500063716 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7112C2D81FDCBD0500063716 /* TableViewController.swift */; };
+		7197E37F1FE6C35000856CFC /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197E37E1FE6C35000856CFC /* ItemViewController.swift */; };
 		71F36F931FDDB61B0051320B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F36F921FDDB61B0051320B /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		7112C2CA1FDCB8EA00063716 /* euskoeventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = euskoeventsUITests.swift; sourceTree = "<group>"; };
 		7112C2CC1FDCB8EA00063716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7112C2D81FDCBD0500063716 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		7197E37E1FE6C35000856CFC /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		71F36F921FDDB61B0051320B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		87C87E2BDACCF254B54878F4 /* Pods-euskoevents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-euskoevents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-euskoevents/Pods-euskoevents.debug.xcconfig"; sourceTree = "<group>"; };
 		8DCA53366706B19067E3D251 /* Pods_euskoeventsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_euskoeventsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				7112C2B61FDCB8EA00063716 /* Info.plist */,
 				7112C2D81FDCBD0500063716 /* TableViewController.swift */,
 				71F36F921FDDB61B0051320B /* MapViewController.swift */,
+				7197E37E1FE6C35000856CFC /* ItemViewController.swift */,
 			);
 			path = euskoevents;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			files = (
 				7112C2AD1FDCB8EA00063716 /* ViewController.swift in Sources */,
 				7112C2D91FDCBD0500063716 /* TableViewController.swift in Sources */,
+				7197E37F1FE6C35000856CFC /* ItemViewController.swift in Sources */,
 				7112C2AB1FDCB8EA00063716 /* AppDelegate.swift in Sources */,
 				71F36F931FDDB61B0051320B /* MapViewController.swift in Sources */,
 			);

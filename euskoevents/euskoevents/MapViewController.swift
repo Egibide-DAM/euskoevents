@@ -51,55 +51,30 @@ class MapViewController: UIViewController {
         
         //descargar datos
 
-        // REF: Desactivar verificación de HTTPS: https://stackoverflow.com/a/30732693/5136913
-        let url = "http://opendata.euskadi.eus/contenidos/ds_eventos/eventos_turisticos/opendata/agenda.json"
+
+        // Que día es hoy?
+        let formatter : DateFormatter = DateFormatter();
+        formatter.dateFormat = "yyyyMdd";
+        let hoy : String = formatter.string(from: NSDate.init(timeIntervalSinceNow: 0) as Date);
         
-        // No podemos usar .responseJSON(), porque no es un JSON válido
-        Alamofire.request(url, method: .get).validate().responseString { response in
-            switch response.result {
-            case .success(let value):
+        
+        // no es necesario ordenar
+        self.odernadoPorFecha = (self.json?.sorted(by: {$0.1["Fechainicioeventosinformato"] < $1.1["Fechainicioeventosinformato"]}))!
+        for a in self.odernadoPorFecha{
+            let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
+            if fEvento! > Int(hoy)! {
                 
-                // Arreglamos los desperfectos
-                var temp = value.dropFirst(13) // jsonCallback(
-                temp = temp.dropLast(2) // );
-                
-                // La codificación de caractéres tampoco es válida, debería ser .utf8
-                if let dataFromString = temp.data(using: .isoLatin1, allowLossyConversion: false) {
-                    print("aaa")
-                    // Convertir el String en JSON con SwiftyJSON
-                    self.json = try! JSON(data: dataFromString)
-
-                    
-                    // Que día es hoy?
-                    let formatter : DateFormatter = DateFormatter();
-                    formatter.dateFormat = "yyyyMdd";
-                    let hoy : String = formatter.string(from: NSDate.init(timeIntervalSinceNow: 0) as Date);
-                    
-                    
-                    // no es necesario ordenar
-                    self.odernadoPorFecha = (self.json?.sorted(by: {$0.1["Fechainicioeventosinformato"] < $1.1["Fechainicioeventosinformato"]}))!
-                    for a in self.odernadoPorFecha{
-                        let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
-                        if fEvento! > Int(hoy)! {
-                            
-                            if a.1["latwgs84"] != nil {
-                                print (a.1["latwgs84"] )
-                                let artwork = Artwork(title: a.1["documentName"].string!,
-                                                      locationName: a.1["eventStartDate"].string!,
-                                                      discipline: "Sculpture",
-                                                      coordinate: CLLocationCoordinate2D(latitude: Double(a.1["latwgs84"].string!)!, longitude: Double(a.1["lonwgs84"].string!)!))
-                                self.mapView.addAnnotation(artwork)
-                            }
-                        }
-                    }
-                    
-
+                if a.1["latwgs84"] != nil {
+                    print (a.1["latwgs84"] )
+                    let artwork = Artwork(title: a.1["documentName"].string!,
+                                          locationName: a.1["eventStartDate"].string!,
+                                          discipline: "Sculpture",
+                                          coordinate: CLLocationCoordinate2D(latitude: Double(a.1["latwgs84"].string!)!, longitude: Double(a.1["lonwgs84"].string!)!))
+                    self.mapView.addAnnotation(artwork)
                 }
-                
-            case .failure(let error):
-                print(error)
             }
         }
+        
         //end: descargar datos
         
 

@@ -8,7 +8,6 @@
 
 import UIKit
 
-import Alamofire
 import SwiftyJSON
 
 class TableViewController: UITableViewController {
@@ -23,89 +22,59 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        // REF: Desactivar verificación de HTTPS: https://stackoverflow.com/a/30732693/5136913
-        let url = "http://opendata.euskadi.eus/contenidos/ds_eventos/eventos_turisticos/opendata/agenda.json"
-        
-        // No podemos usar .responseJSON(), porque no es un JSON válido
-        Alamofire.request(url, method: .get).validate().responseString { response in
-            switch response.result {
-            case .success(let value):
 
-                // Arreglamos los desperfectos
-                var temp = value.dropFirst(13) // jsonCallback(
-                temp = temp.dropLast(2) // );
-                
-                // La codificación de caractéres tampoco es válida, debería ser .utf8
-                if let dataFromString = temp.data(using: .isoLatin1, allowLossyConversion: false) {
-                    
-                    // Convertir el String en JSON con SwiftyJSON
-                    self.json = try! JSON(data: dataFromString)
-                    
-                    // Que día es hoy?
-                    let formatter : DateFormatter = DateFormatter();
-                    formatter.dateFormat = "yyyyMdd";
-                    let hoy : String = formatter.string(from: NSDate.init(timeIntervalSinceNow: 0) as Date);
-                    
-                    // Filtrar dependiendo de lo solicitado
-                    self.odernadoPorFecha = (self.json?.sorted(by: {$0.1["Fechainicioeventosinformato"] < $1.1["Fechainicioeventosinformato"]}))!
-                    for a in self.odernadoPorFecha{
-                        if self.tipoTabla == "Todos" {
-                            self.odernado.append(a)
-                        }
-                        if self.tipoTabla == "Proximos" {
-                            var fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
-                             if fEvento! > Int(hoy)! {
-                                self.odernado.append(a)
-                            }
-                            
-                        }
-                        if self.tipoTabla == "Araba" {
-                            var fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
-                            if fEvento! > Int(hoy)! {
-                                if a.1["TerritoriohistoricoNombre"].string?.range(of:"ALAVA") != nil{
-                                    self.odernado.append(a)
-                                }
-                            }
-                            
-                        }
-                        if self.tipoTabla == "Bizkaia" {
-                            var fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
-                            if fEvento! > Int(hoy)! {
-                                if a.1["TerritoriohistoricoNombre"].string?.range(of:"BIZKAIA") != nil{
-                                    self.odernado.append(a)
-                                }
-                            }
-                            
-                        }
-                        if self.tipoTabla == "Gipuzkoa" {
-                            var fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
-                            if fEvento! > Int(hoy)! {
-                                if a.1["TerritoriohistoricoNombre"].string?.range(of:"GIPUZKOA") != nil{
-                                    self.odernado.append(a)
-                                }
-                            }
-                            
-                        }
-//Araba
-//Bizkaia
-//Gipuzkoa
-                        
-                    }
-                    
-                    
-                    //self.odernado = (self.json?.sorted(by: {$0.1["TerritoriohistoricoNombre"] < $1.1["TerritoriohistoricoNombre"]}))!
-
-                    
-                    // Pedir la recarga de la tabla
-                    self.tableView.reloadData()
+        // Que día es hoy?
+        let formatter : DateFormatter = DateFormatter();
+        formatter.dateFormat = "yyyyMdd";
+        let hoy : String = formatter.string(from: NSDate.init(timeIntervalSinceNow: 0) as Date);
+        
+        // Filtrar dependiendo de lo solicitado
+        self.odernadoPorFecha = (self.json?.sorted(by: {$0.1["Fechainicioeventosinformato"] < $1.1["Fechainicioeventosinformato"]}))!
+        for a in self.odernadoPorFecha{
+            if self.tipoTabla == "Todos" {
+                self.odernado.append(a)
+            }
+            if self.tipoTabla == "Proximos" {
+                var fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
+                 if fEvento! > Int(hoy)! {
+                    self.odernado.append(a)
                 }
                 
-            case .failure(let error):
-                print(error)
+            }
+            if self.tipoTabla == "Araba" {
+                var fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
+                if fEvento! > Int(hoy)! {
+                    if a.1["TerritoriohistoricoNombre"].string?.range(of:"ALAVA") != nil{
+                        self.odernado.append(a)
+                    }
+                }
+                
+            }
+            if self.tipoTabla == "Bizkaia" {
+                var fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
+                if fEvento! > Int(hoy)! {
+                    if a.1["TerritoriohistoricoNombre"].string?.range(of:"BIZKAIA") != nil{
+                        self.odernado.append(a)
+                    }
+                }
+                
+            }
+            if self.tipoTabla == "Gipuzkoa" {
+                var fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
+                if fEvento! > Int(hoy)! {
+                    if a.1["TerritoriohistoricoNombre"].string?.range(of:"GIPUZKOA") != nil{
+                        self.odernado.append(a)
+                    }
+                }
             }
         }
         
+        
+        //self.odernado = (self.json?.sorted(by: {$0.1["TerritoriohistoricoNombre"] < $1.1["TerritoriohistoricoNombre"]}))!
+
+        
+        // Pedir la recarga de la tabla
+        self.tableView.reloadData()
     }
     
     // MARK: - Table view data source
@@ -155,5 +124,12 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "verItem"){
+            let destino = segue.destination as! ItemViewController;
+            destino.elemento = [odernado[(self.tableView.indexPathForSelectedRow?.item)!]]
+        }
+    }
 }
 
