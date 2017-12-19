@@ -49,7 +49,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //descargar datos
+        mapView.delegate = self
 
 
         // Que día es hoy?
@@ -83,7 +83,6 @@ class MapViewController: UIViewController {
         centerMapOnLocation(location: initialLocation)
 
         
-        mapView.delegate = self
         
 
 
