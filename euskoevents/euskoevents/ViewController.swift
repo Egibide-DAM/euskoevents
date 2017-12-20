@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     // Objeto de SwiftyJSON
     var json: JSON?
     
+    @IBOutlet weak var btnAraba: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

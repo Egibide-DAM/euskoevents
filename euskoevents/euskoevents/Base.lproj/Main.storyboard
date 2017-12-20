@@ -155,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="1957.5999999999999" y="176.76161919040482"/>
         </scene>
-        <!--View Controller-->
+        <!--Eusko Events-->
         <scene sceneID="f23-cb-Gfu">
             <objects>
                 <viewController id="bi7-K9-k4j" customClass="ViewController" customModule="euskoevents" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,68 +163,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kV-Uc-jcK">
-                                <rect key="frame" x="18" y="249" width="121" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoT-Sn-6h2" userLabel="Todos2">
+                                <rect key="frame" x="200" y="291" width="175" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Proximos eventos"/>
+                                <state key="normal" title="Todos los eventos" backgroundImage="pv.png"/>
                                 <connections>
-                                    <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaProximos" id="PXc-DR-G5c"/>
+                                    <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaTodos" id="0Sk-4f-vEe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyC-GS-NF6">
+                                <rect key="frame" x="2" y="116" width="154" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Araba" backgroundImage="araba.gif">
+                                    <color key="titleColor" red="0.1232987716794014" green="0.47714972496032715" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaAraba" id="7Aw-d6-MgL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8R-Dd-pQC">
+                                <rect key="frame" x="180" y="116" width="195" height="139"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Gipuzkoa" backgroundImage="gipuzkoa.gif"/>
+                                <connections>
+                                    <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaGipuzkoa" id="Alo-bF-ptr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQr-JH-wqX">
+                                <rect key="frame" x="2" y="291" width="154" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Bizkaia" backgroundImage="vizkaya.gif">
+                                    <color key="titleColor" red="0.1232987716794014" green="0.47714972496032715" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaBizkaia" id="H0w-ym-TcA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypM-uL-Zpb">
-                                <rect key="frame" x="16" y="439" width="145" height="30"/>
+                                <rect key="frame" x="16" y="446" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ver mapa de eventos"/>
                                 <connections>
                                     <segue destination="Sc0-vx-P4N" kind="show" identifier="verMapa" id="vSe-JG-nP8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoT-Sn-6h2" userLabel="Todos2">
-                                <rect key="frame" x="16" y="211" width="124" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kV-Uc-jcK">
+                                <rect key="frame" x="118" y="484" width="121" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Todos los eventos"/>
+                                <state key="normal" title="Proximos eventos"/>
                                 <connections>
-                                    <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaTodos" id="0Sk-4f-vEe"/>
+                                    <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaProximos" id="PXc-DR-G5c"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyC-GS-NF6">
-                                <rect key="frame" x="54" y="318" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Araba"/>
-                                <connections>
-                                    <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaAraba" id="7Aw-d6-MgL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8R-Dd-pQC">
-                                <rect key="frame" x="108" y="318" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Gipuzkoa"/>
-                                <connections>
-                                    <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaGipuzkoa" id="Alo-bF-ptr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQr-JH-wqX">
-                                <rect key="frame" x="180" y="318" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Bizkaia"/>
-                                <connections>
-                                    <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaBizkaia" id="H0w-ym-TcA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dag-jK-jbD">
-                                <rect key="frame" x="18" y="287" width="212" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Proximos Eventos por territorio"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cS5-kb-Yz2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3c0-Ae-Mti"/>
+                    <navigationItem key="navigationItem" title="Eusko Events" id="D7t-7Y-R9V"/>
+                    <connections>
+                        <outlet property="btnAraba" destination="HyC-GS-NF6" id="Mor-99-qaa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NwH-2H-R5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-33" y="177"/>
+            <point key="canvasLocation" x="-34.399999999999999" y="176.76161919040482"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VaS-ob-5rQ">
@@ -245,6 +247,12 @@
             <point key="canvasLocation" x="-793" y="177"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="araba.gif" width="517" height="499"/>
+        <image name="gipuzkoa.gif" width="541" height="428"/>
+        <image name="pv.png" width="1253" height="987"/>
+        <image name="vizkaya.gif" width="565" height="345"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7Aw-d6-MgL"/>
     </inferredMetricsTieBreakers>

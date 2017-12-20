@@ -19,7 +19,7 @@ class Artwork: NSObject, MKAnnotation {
     let discipline: String
     let coordinate: CLLocationCoordinate2D
     
-    init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
+    init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D, numero: Int) {
         self.title = title
         self.locationName = locationName
         self.discipline = discipline
@@ -31,6 +31,7 @@ class Artwork: NSObject, MKAnnotation {
     var subtitle: String? {
         return locationName
     }
+
 }
 
 class MapViewController: UIViewController {
@@ -59,7 +60,8 @@ class MapViewController: UIViewController {
         
         
         // no es necesario ordenar
-        self.odernadoPorFecha = (self.json?.sorted(by: {$0.1["Fechainicioeventosinformato"] < $1.1["Fechainicioeventosinformato"]}))!
+        self.odernadoPorFecha = (self.json?.sorted(by: {$0.1["Fechainic2oeventosinformato"] < $1.1["Fechainicioeventosinformato"]}))!
+        var cuenta = 0
         for a in self.odernadoPorFecha{
             let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
             if fEvento! > Int(hoy)! {
@@ -69,10 +71,13 @@ class MapViewController: UIViewController {
                     let artwork = Artwork(title: a.1["documentName"].string!,
                                           locationName: a.1["eventStartDate"].string!,
                                           discipline: "Sculpture",
-                                          coordinate: CLLocationCoordinate2D(latitude: Double(a.1["latwgs84"].string!)!, longitude: Double(a.1["lonwgs84"].string!)!))
+                                          coordinate: CLLocationCoordinate2D(latitude: Double(a.1["latwgs84"].string!)!, longitude: Double(a.1["lonwgs84"].string!)!),
+                                          numero: cuenta
+                    )
                     self.mapView.addAnnotation(artwork)
                 }
             }
+            cuenta = cuenta + 1
         }
         
         //end: descargar datos
@@ -114,6 +119,8 @@ extension UIViewController: MKMapViewDelegate {
         // 3
         let identifier = "marker"
         var view: MKMarkerAnnotationView
+        let button = UIButton(type: .detailDisclosure) as UIButton // button with info sign
+
         // 4
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             as? MKMarkerAnnotationView {
@@ -124,9 +131,19 @@ extension UIViewController: MKMapViewDelegate {
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
-            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            view.rightCalloutAccessoryView = button
         }
         return view
+    }
+    public func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.rightCalloutAccessoryView{
+            // TODO: Ir a evento
+            //print(mapView.selectedAnnotations.first)
+            
+           
+            print("PULSADO") // your annotation's title
+            //Perform a segue here to navigate to another viewcontroller
+        }
     }
 }
 
