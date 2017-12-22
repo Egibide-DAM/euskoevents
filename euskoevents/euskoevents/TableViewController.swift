@@ -1,6 +1,6 @@
 //
 //  TableViewController.swift
-//  euskoevents
+//  EuskoEvents
 //
 //  Created by Asier on 10/12/17.
 //  Copyright © 2017 Asier. All rights reserved.

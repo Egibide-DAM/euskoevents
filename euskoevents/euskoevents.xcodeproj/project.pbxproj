@@ -7,19 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		413EB0ACADCF5D9D9ED38F3E /* Pods_euskoevents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFCABE0249A3CC184EA87FA /* Pods_euskoevents.framework */; };
+		0A488D57FE6B08CB1F67797F /* Pods_EuskoEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CDA3D659F89F35C3DF6500 /* Pods_EuskoEvents.framework */; };
 		7112C2AB1FDCB8EA00063716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7112C2AA1FDCB8EA00063716 /* AppDelegate.swift */; };
 		7112C2AD1FDCB8EA00063716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7112C2AC1FDCB8EA00063716 /* ViewController.swift */; };
 		7112C2B01FDCB8EA00063716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7112C2AE1FDCB8EA00063716 /* Main.storyboard */; };
 		7112C2B21FDCB8EA00063716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7112C2B11FDCB8EA00063716 /* Assets.xcassets */; };
 		7112C2B51FDCB8EA00063716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7112C2B31FDCB8EA00063716 /* LaunchScreen.storyboard */; };
-		7112C2C01FDCB8EA00063716 /* euskoeventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7112C2BF1FDCB8EA00063716 /* euskoeventsTests.swift */; };
-		7112C2CB1FDCB8EA00063716 /* euskoeventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7112C2CA1FDCB8EA00063716 /* euskoeventsUITests.swift */; };
 		7112C2D91FDCBD0500063716 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7112C2D81FDCBD0500063716 /* TableViewController.swift */; };
-		71890DB21FEAEF2200B70F37 /* pv.png in Resources */ = {isa = PBXBuildFile; fileRef = 71890DAE1FEAEF2100B70F37 /* pv.png */; };
-		71890DB31FEAEF2200B70F37 /* araba.gif in Resources */ = {isa = PBXBuildFile; fileRef = 71890DAF1FEAEF2100B70F37 /* araba.gif */; };
-		71890DB41FEAEF2200B70F37 /* gipuzkoa.gif in Resources */ = {isa = PBXBuildFile; fileRef = 71890DB01FEAEF2200B70F37 /* gipuzkoa.gif */; };
-		71890DB51FEAEF2200B70F37 /* vizkaya.gif in Resources */ = {isa = PBXBuildFile; fileRef = 71890DB11FEAEF2200B70F37 /* vizkaya.gif */; };
 		7197E37F1FE6C35000856CFC /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197E37E1FE6C35000856CFC /* ItemViewController.swift */; };
 		71F36F931FDDB61B0051320B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F36F921FDDB61B0051320B /* MapViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,43 +24,33 @@
 			containerPortal = 7112C29F1FDCB8EA00063716 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7112C2A61FDCB8EA00063716;
-			remoteInfo = euskoevents;
+			remoteInfo = EuskoEvents;
 		};
 		7112C2C71FDCB8EA00063716 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7112C29F1FDCB8EA00063716 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7112C2A61FDCB8EA00063716;
-			remoteInfo = euskoevents;
+			remoteInfo = EuskoEvents;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4BB4F0F0E02EA58A510008D7 /* Pods-euskoevents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-euskoevents.release.xcconfig"; path = "Pods/Target Support Files/Pods-euskoevents/Pods-euskoevents.release.xcconfig"; sourceTree = "<group>"; };
-		7112C2A71FDCB8EA00063716 /* euskoevents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = euskoevents.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38F43EF42025812EDDCF9091 /* Pods-EuskoEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EuskoEvents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EuskoEvents/Pods-EuskoEvents.debug.xcconfig"; sourceTree = "<group>"; };
+		41BB130E621D6A29721AB29A /* Pods-EuskoEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EuskoEvents.release.xcconfig"; path = "Pods/Target Support Files/Pods-EuskoEvents/Pods-EuskoEvents.release.xcconfig"; sourceTree = "<group>"; };
+		44CDA3D659F89F35C3DF6500 /* Pods_EuskoEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EuskoEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7112C2A71FDCB8EA00063716 /* EuskoEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuskoEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7112C2AA1FDCB8EA00063716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7112C2AC1FDCB8EA00063716 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7112C2AF1FDCB8EA00063716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7112C2B11FDCB8EA00063716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7112C2B41FDCB8EA00063716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7112C2B61FDCB8EA00063716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7112C2BB1FDCB8EA00063716 /* euskoeventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = euskoeventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7112C2BF1FDCB8EA00063716 /* euskoeventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = euskoeventsTests.swift; sourceTree = "<group>"; };
-		7112C2C11FDCB8EA00063716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7112C2C61FDCB8EA00063716 /* euskoeventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = euskoeventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7112C2CA1FDCB8EA00063716 /* euskoeventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = euskoeventsUITests.swift; sourceTree = "<group>"; };
-		7112C2CC1FDCB8EA00063716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7112C2BB1FDCB8EA00063716 /* EuskoEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EuskoEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7112C2C61FDCB8EA00063716 /* EuskoEventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EuskoEventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7112C2D81FDCBD0500063716 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		71890DAE1FEAEF2100B70F37 /* pv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pv.png; sourceTree = "<group>"; };
-		71890DAF1FEAEF2100B70F37 /* araba.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = araba.gif; sourceTree = "<group>"; };
-		71890DB01FEAEF2200B70F37 /* gipuzkoa.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gipuzkoa.gif; sourceTree = "<group>"; };
-		71890DB11FEAEF2200B70F37 /* vizkaya.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = vizkaya.gif; sourceTree = "<group>"; };
 		7197E37E1FE6C35000856CFC /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		71F36F921FDDB61B0051320B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		87C87E2BDACCF254B54878F4 /* Pods-euskoevents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-euskoevents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-euskoevents/Pods-euskoevents.debug.xcconfig"; sourceTree = "<group>"; };
-		8DCA53366706B19067E3D251 /* Pods_euskoeventsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_euskoeventsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5607B0BCBDA049F4B72B0DD /* Pods_euskoeventsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_euskoeventsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAFCABE0249A3CC184EA87FA /* Pods_euskoevents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_euskoevents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				413EB0ACADCF5D9D9ED38F3E /* Pods_euskoevents.framework in Frameworks */,
+				0A488D57FE6B08CB1F67797F /* Pods_EuskoEvents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,26 +82,24 @@
 		7112C29E1FDCB8EA00063716 = {
 			isa = PBXGroup;
 			children = (
-				7112C2A91FDCB8EA00063716 /* euskoevents */,
-				7112C2BE1FDCB8EA00063716 /* euskoeventsTests */,
-				7112C2C91FDCB8EA00063716 /* euskoeventsUITests */,
+				7112C2A91FDCB8EA00063716 /* EuskoEvents */,
 				7112C2A81FDCB8EA00063716 /* Products */,
-				D5DCACEE4D8AF7F32580E475 /* Pods */,
-				9087F052F2B9AB9A54BE2963 /* Frameworks */,
+				ACE9D3F8C93E6EA0FE4BAC5E /* Pods */,
+				ED10B52632AE8F9BC2141E58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		7112C2A81FDCB8EA00063716 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7112C2A71FDCB8EA00063716 /* euskoevents.app */,
-				7112C2BB1FDCB8EA00063716 /* euskoeventsTests.xctest */,
-				7112C2C61FDCB8EA00063716 /* euskoeventsUITests.xctest */,
+				7112C2A71FDCB8EA00063716 /* EuskoEvents.app */,
+				7112C2BB1FDCB8EA00063716 /* EuskoEventsTests.xctest */,
+				7112C2C61FDCB8EA00063716 /* EuskoEventsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7112C2A91FDCB8EA00063716 /* euskoevents */ = {
+		7112C2A91FDCB8EA00063716 /* EuskoEvents */ = {
 			isa = PBXGroup;
 			children = (
 				7112C2AA1FDCB8EA00063716 /* AppDelegate.swift */,
@@ -126,80 +108,56 @@
 				7112C2B11FDCB8EA00063716 /* Assets.xcassets */,
 				7112C2B31FDCB8EA00063716 /* LaunchScreen.storyboard */,
 				7112C2B61FDCB8EA00063716 /* Info.plist */,
-				71890DAF1FEAEF2100B70F37 /* araba.gif */,
-				71890DB01FEAEF2200B70F37 /* gipuzkoa.gif */,
-				71890DAE1FEAEF2100B70F37 /* pv.png */,
-				71890DB11FEAEF2200B70F37 /* vizkaya.gif */,
 				7112C2D81FDCBD0500063716 /* TableViewController.swift */,
 				71F36F921FDDB61B0051320B /* MapViewController.swift */,
 				7197E37E1FE6C35000856CFC /* ItemViewController.swift */,
 			);
-			path = euskoevents;
+			path = EuskoEvents;
 			sourceTree = "<group>";
 		};
-		7112C2BE1FDCB8EA00063716 /* euskoeventsTests */ = {
+		ACE9D3F8C93E6EA0FE4BAC5E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7112C2BF1FDCB8EA00063716 /* euskoeventsTests.swift */,
-				7112C2C11FDCB8EA00063716 /* Info.plist */,
-			);
-			path = euskoeventsTests;
-			sourceTree = "<group>";
-		};
-		7112C2C91FDCB8EA00063716 /* euskoeventsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7112C2CA1FDCB8EA00063716 /* euskoeventsUITests.swift */,
-				7112C2CC1FDCB8EA00063716 /* Info.plist */,
-			);
-			path = euskoeventsUITests;
-			sourceTree = "<group>";
-		};
-		9087F052F2B9AB9A54BE2963 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EAFCABE0249A3CC184EA87FA /* Pods_euskoevents.framework */,
-				C5607B0BCBDA049F4B72B0DD /* Pods_euskoeventsTests.framework */,
-				8DCA53366706B19067E3D251 /* Pods_euskoeventsUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D5DCACEE4D8AF7F32580E475 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				87C87E2BDACCF254B54878F4 /* Pods-euskoevents.debug.xcconfig */,
-				4BB4F0F0E02EA58A510008D7 /* Pods-euskoevents.release.xcconfig */,
+				38F43EF42025812EDDCF9091 /* Pods-EuskoEvents.debug.xcconfig */,
+				41BB130E621D6A29721AB29A /* Pods-EuskoEvents.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED10B52632AE8F9BC2141E58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44CDA3D659F89F35C3DF6500 /* Pods_EuskoEvents.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7112C2A61FDCB8EA00063716 /* euskoevents */ = {
+		7112C2A61FDCB8EA00063716 /* EuskoEvents */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7112C2CF1FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "euskoevents" */;
+			buildConfigurationList = 7112C2CF1FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "EuskoEvents" */;
 			buildPhases = (
-				2D763916D9C6DDF0782FD93F /* [CP] Check Pods Manifest.lock */,
+				70BD63D4E97F2169107999F7 /* [CP] Check Pods Manifest.lock */,
 				7112C2A31FDCB8EA00063716 /* Sources */,
 				7112C2A41FDCB8EA00063716 /* Frameworks */,
 				7112C2A51FDCB8EA00063716 /* Resources */,
-				2A41140B3D77A92BEBB9770B /* [CP] Embed Pods Frameworks */,
-				7CDE24BC4A01CE330AE13DF1 /* [CP] Copy Pods Resources */,
+				CC3FB55596391A98953F78EC /* [CP] Embed Pods Frameworks */,
+				F9C586FC301BC14D86BC3A4C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = euskoevents;
-			productName = euskoevents;
-			productReference = 7112C2A71FDCB8EA00063716 /* euskoevents.app */;
+			name = EuskoEvents;
+			productName = EuskoEvents;
+			productReference = 7112C2A71FDCB8EA00063716 /* EuskoEvents.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7112C2BA1FDCB8EA00063716 /* euskoeventsTests */ = {
+		7112C2BA1FDCB8EA00063716 /* EuskoEventsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7112C2D21FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "euskoeventsTests" */;
+			buildConfigurationList = 7112C2D21FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "EuskoEventsTests" */;
 			buildPhases = (
 				7112C2B71FDCB8EA00063716 /* Sources */,
 				7112C2B81FDCB8EA00063716 /* Frameworks */,
@@ -210,14 +168,14 @@
 			dependencies = (
 				7112C2BD1FDCB8EA00063716 /* PBXTargetDependency */,
 			);
-			name = euskoeventsTests;
-			productName = euskoeventsTests;
-			productReference = 7112C2BB1FDCB8EA00063716 /* euskoeventsTests.xctest */;
+			name = EuskoEventsTests;
+			productName = EuskoEventsTests;
+			productReference = 7112C2BB1FDCB8EA00063716 /* EuskoEventsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7112C2C51FDCB8EA00063716 /* euskoeventsUITests */ = {
+		7112C2C51FDCB8EA00063716 /* EuskoEventsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7112C2D51FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "euskoeventsUITests" */;
+			buildConfigurationList = 7112C2D51FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "EuskoEventsUITests" */;
 			buildPhases = (
 				7112C2C21FDCB8EA00063716 /* Sources */,
 				7112C2C31FDCB8EA00063716 /* Frameworks */,
@@ -228,9 +186,9 @@
 			dependencies = (
 				7112C2C81FDCB8EA00063716 /* PBXTargetDependency */,
 			);
-			name = euskoeventsUITests;
-			productName = euskoeventsUITests;
-			productReference = 7112C2C61FDCB8EA00063716 /* euskoeventsUITests.xctest */;
+			name = EuskoEventsUITests;
+			productName = EuskoEventsUITests;
+			productReference = 7112C2C61FDCB8EA00063716 /* EuskoEventsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -259,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7112C2A21FDCB8EA00063716 /* Build configuration list for PBXProject "euskoevents" */;
+			buildConfigurationList = 7112C2A21FDCB8EA00063716 /* Build configuration list for PBXProject "EuskoEvents" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -272,9 +230,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7112C2A61FDCB8EA00063716 /* euskoevents */,
-				7112C2BA1FDCB8EA00063716 /* euskoeventsTests */,
-				7112C2C51FDCB8EA00063716 /* euskoeventsUITests */,
+				7112C2A61FDCB8EA00063716 /* EuskoEvents */,
+				7112C2BA1FDCB8EA00063716 /* EuskoEventsTests */,
+				7112C2C51FDCB8EA00063716 /* EuskoEventsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -285,12 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7112C2B51FDCB8EA00063716 /* LaunchScreen.storyboard in Resources */,
-				71890DB31FEAEF2200B70F37 /* araba.gif in Resources */,
 				7112C2B21FDCB8EA00063716 /* Assets.xcassets in Resources */,
 				7112C2B01FDCB8EA00063716 /* Main.storyboard in Resources */,
-				71890DB51FEAEF2200B70F37 /* vizkaya.gif in Resources */,
-				71890DB41FEAEF2200B70F37 /* gipuzkoa.gif in Resources */,
-				71890DB21FEAEF2200B70F37 /* pv.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,27 +265,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A41140B3D77A92BEBB9770B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-euskoevents/Pods-euskoevents-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-euskoevents/Pods-euskoevents-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2D763916D9C6DDF0782FD93F /* [CP] Check Pods Manifest.lock */ = {
+		70BD63D4E97F2169107999F7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -342,14 +276,34 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-euskoevents-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EuskoEvents-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7CDE24BC4A01CE330AE13DF1 /* [CP] Copy Pods Resources */ = {
+		CC3FB55596391A98953F78EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EuskoEvents/Pods-EuskoEvents-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EuskoEvents/Pods-EuskoEvents-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9C586FC301BC14D86BC3A4C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -361,7 +315,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-euskoevents/Pods-euskoevents-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EuskoEvents/Pods-EuskoEvents-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -383,7 +337,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7112C2C01FDCB8EA00063716 /* euskoeventsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +344,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7112C2CB1FDCB8EA00063716 /* euskoeventsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,12 +352,12 @@
 /* Begin PBXTargetDependency section */
 		7112C2BD1FDCB8EA00063716 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7112C2A61FDCB8EA00063716 /* euskoevents */;
+			target = 7112C2A61FDCB8EA00063716 /* EuskoEvents */;
 			targetProxy = 7112C2BC1FDCB8EA00063716 /* PBXContainerItemProxy */;
 		};
 		7112C2C81FDCB8EA00063716 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7112C2A61FDCB8EA00063716 /* euskoevents */;
+			target = 7112C2A61FDCB8EA00063716 /* EuskoEvents */;
 			targetProxy = 7112C2C71FDCB8EA00063716 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -539,13 +491,14 @@
 		};
 		7112C2D01FDCB8EA00063716 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87C87E2BDACCF254B54878F4 /* Pods-euskoevents.debug.xcconfig */;
+			baseConfigurationReference = 38F43EF42025812EDDCF9091 /* Pods-EuskoEvents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = euskoevents/Info.plist;
+				DEVELOPMENT_TEAM = RSEH385M54;
+				INFOPLIST_FILE = EuskoEvents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = asier.euskoevents;
+				PRODUCT_BUNDLE_IDENTIFIER = asier.EuskoEvents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -554,13 +507,14 @@
 		};
 		7112C2D11FDCB8EA00063716 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BB4F0F0E02EA58A510008D7 /* Pods-euskoevents.release.xcconfig */;
+			baseConfigurationReference = 41BB130E621D6A29721AB29A /* Pods-EuskoEvents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = euskoevents/Info.plist;
+				DEVELOPMENT_TEAM = RSEH385M54;
+				INFOPLIST_FILE = EuskoEvents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = asier.euskoevents;
+				PRODUCT_BUNDLE_IDENTIFIER = asier.EuskoEvents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -573,13 +527,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = euskoeventsTests/Info.plist;
+				INFOPLIST_FILE = EuskoEventsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = asier.euskoeventsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = asier.EuskoEventsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/euskoevents.app/euskoevents";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EuskoEvents.app/EuskoEvents";
 			};
 			name = Debug;
 		};
@@ -589,13 +543,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = euskoeventsTests/Info.plist;
+				INFOPLIST_FILE = EuskoEventsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = asier.euskoeventsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = asier.EuskoEventsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/euskoevents.app/euskoevents";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EuskoEvents.app/EuskoEvents";
 			};
 			name = Release;
 		};
@@ -604,13 +558,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = euskoeventsUITests/Info.plist;
+				INFOPLIST_FILE = EuskoEventsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = asier.euskoeventsUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = asier.EuskoEventsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = euskoevents;
+				TEST_TARGET_NAME = EuskoEvents;
 			};
 			name = Debug;
 		};
@@ -619,20 +573,20 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = euskoeventsUITests/Info.plist;
+				INFOPLIST_FILE = EuskoEventsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = asier.euskoeventsUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = asier.EuskoEventsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = euskoevents;
+				TEST_TARGET_NAME = EuskoEvents;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7112C2A21FDCB8EA00063716 /* Build configuration list for PBXProject "euskoevents" */ = {
+		7112C2A21FDCB8EA00063716 /* Build configuration list for PBXProject "EuskoEvents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7112C2CD1FDCB8EA00063716 /* Debug */,
@@ -641,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7112C2CF1FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "euskoevents" */ = {
+		7112C2CF1FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "EuskoEvents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7112C2D01FDCB8EA00063716 /* Debug */,
@@ -650,7 +604,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7112C2D21FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "euskoeventsTests" */ = {
+		7112C2D21FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "EuskoEventsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7112C2D31FDCB8EA00063716 /* Debug */,
@@ -659,7 +613,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7112C2D51FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "euskoeventsUITests" */ = {
+		7112C2D51FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "EuskoEventsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7112C2D61FDCB8EA00063716 /* Debug */,

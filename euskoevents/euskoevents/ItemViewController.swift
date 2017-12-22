@@ -1,6 +1,6 @@
 //
 //  ItemViewController.swift
-//  euskoevents
+//  EuskoEvents
 //
 //  Created by Asier on 17/12/17.
 //  Copyright © 2017 Asier. All rights reserved.
