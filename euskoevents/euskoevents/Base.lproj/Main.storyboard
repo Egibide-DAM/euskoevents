@@ -168,7 +168,7 @@
             </objects>
             <point key="canvasLocation" x="1957.5999999999999" y="176.76161919040482"/>
         </scene>
-        <!--Eusko Events-->
+        <!--EuskoEvents-->
         <scene sceneID="f23-cb-Gfu">
             <objects>
                 <viewController id="bi7-K9-k4j" customClass="ViewController" customModule="EuskoEvents" customModuleProvider="target" sceneMemberID="viewController">
@@ -176,8 +176,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="rnI-87-O3k">
-                                <rect key="frame" x="27.666666666666657" y="216" width="320" height="380"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rnI-87-O3k">
+                                <rect key="frame" x="27.666666666666657" y="206.33333333333337" width="320" height="400"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="djV-l8-1Jy">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
@@ -185,9 +185,9 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ku4-6L-rpA">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyC-GS-NF6">
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyC-GS-NF6" userLabel="Araba">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
-                                                        <state key="normal" title="Araba" backgroundImage="Araba">
+                                                        <state key="normal" backgroundImage="Araba">
                                                             <color key="titleColor" red="0.1232987716794014" green="0.47714972496032715" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
@@ -196,7 +196,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8R-Dd-pQC">
                                                         <rect key="frame" x="160" y="0.0" width="160" height="160"/>
-                                                        <state key="normal" title="Gipuzkoa" backgroundImage="Gipuzkoa"/>
+                                                        <state key="normal" backgroundImage="Gipuzkoa"/>
                                                         <connections>
                                                             <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaGipuzkoa" id="Alo-bF-ptr"/>
                                                         </connections>
@@ -204,20 +204,20 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smc-ZD-vaX">
-                                                <rect key="frame" x="0.0" y="160" width="320" height="160"/>
+                                                <rect key="frame" x="0.0" y="159.99999999999997" width="320" height="160.00000000000003"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQr-JH-wqX">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
-                                                        <state key="normal" title="Bizkaia" backgroundImage="Bizkaia">
+                                                        <state key="normal" backgroundImage="Bizkaia">
                                                             <color key="titleColor" red="0.1232987716794014" green="0.47714972496032715" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaBizkaia" id="H0w-ym-TcA"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoT-Sn-6h2" userLabel="Todos2">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoT-Sn-6h2" userLabel="Todos">
                                                         <rect key="frame" x="160" y="0.0" width="160" height="160"/>
-                                                        <state key="normal" title="Todos los eventos" backgroundImage="Euskadi"/>
+                                                        <state key="normal" backgroundImage="Euskadi"/>
                                                         <connections>
                                                             <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaTodos" id="0Sk-4f-vEe"/>
                                                         </connections>
@@ -227,7 +227,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iYR-1h-MAY">
-                                        <rect key="frame" x="0.0" y="320" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="340" width="320" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypM-uL-Zpb">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
@@ -238,7 +238,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kV-Uc-jcK">
                                                 <rect key="frame" x="0.0" y="30" width="320" height="30"/>
-                                                <state key="normal" title="Proximos eventos"/>
+                                                <state key="normal" title="Solo próximos eventos"/>
                                                 <connections>
                                                     <segue destination="aZt-FW-bXe" kind="show" identifier="verTablaProximos" id="PXc-DR-G5c"/>
                                                 </connections>
@@ -258,7 +258,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cS5-kb-Yz2"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Eusko Events" id="D7t-7Y-R9V"/>
+                    <navigationItem key="navigationItem" title="EuskoEvents" id="D7t-7Y-R9V"/>
                     <connections>
                         <outlet property="btnAraba" destination="HyC-GS-NF6" id="Mor-99-qaa"/>
                     </connections>

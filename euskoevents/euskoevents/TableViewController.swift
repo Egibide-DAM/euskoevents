@@ -23,6 +23,9 @@ class TableViewController: UITableViewController {
         
         super.viewDidLoad()
 
+        // Ponemos el título de lo que estamos mostrando
+        self.navigationItem.title = self.tipoTabla!
+        
         // Que día es hoy?
         let formatter : DateFormatter = DateFormatter();
         formatter.dateFormat = "yyyyMdd";
