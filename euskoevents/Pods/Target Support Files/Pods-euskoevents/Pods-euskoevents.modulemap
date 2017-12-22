@@ -1,0 +1,6 @@
+framework module Pods_euskoevents {
+  umbrella header "Pods-euskoevents-umbrella.h"
+
+  export *
+  module * { export * }
+}
