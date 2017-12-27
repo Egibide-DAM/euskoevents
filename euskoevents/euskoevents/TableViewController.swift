@@ -38,14 +38,14 @@ class TableViewController: UITableViewController {
                 self.odernado.append(a)
             }
             if self.tipoTabla == "Proximos" {
-                var fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
+                let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
                  if fEvento! > Int(hoy)! {
                     self.odernado.append(a)
                 }
                 
             }
             if self.tipoTabla == "Araba" {
-                var fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
+                let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
                 if fEvento! > Int(hoy)! {
                     if a.1["TerritoriohistoricoNombre"].string?.range(of:"ALAVA") != nil{
                         self.odernado.append(a)
@@ -54,7 +54,7 @@ class TableViewController: UITableViewController {
                 
             }
             if self.tipoTabla == "Bizkaia" {
-                var fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
+                let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
                 if fEvento! > Int(hoy)! {
                     if a.1["TerritoriohistoricoNombre"].string?.range(of:"BIZKAIA") != nil{
                         self.odernado.append(a)
@@ -63,7 +63,7 @@ class TableViewController: UITableViewController {
                 
             }
             if self.tipoTabla == "Gipuzkoa" {
-                var fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
+                let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
                 if fEvento! > Int(hoy)! {
                     if a.1["TerritoriohistoricoNombre"].string?.range(of:"GIPUZKOA") != nil{
                         self.odernado.append(a)
@@ -89,14 +89,14 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // Si no hay datos, no hay filas
-        return odernado.count ?? 0
+        return odernado.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let formatter : DateFormatter = DateFormatter();
-        formatter.dateFormat = "yyyyMdd";
-        let hoy : String = formatter.string(from: NSDate.init(timeIntervalSinceNow: 0) as Date);
+//        let formatter : DateFormatter = DateFormatter();
+//        formatter.dateFormat = "yyyyMdd";
+//        let hoy : String = formatter.string(from: NSDate.init(timeIntervalSinceNow: 0) as Date);
         
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)

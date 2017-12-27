@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "mapa_euskadi.png",
+      "filename" : "euskadi.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "mapa_euskadi@2x.png",
+      "filename" : "euskadi@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "mapa_euskadi@3x.png",
+      "filename" : "euskadi@3x.png",
       "scale" : "3x"
     }
   ],

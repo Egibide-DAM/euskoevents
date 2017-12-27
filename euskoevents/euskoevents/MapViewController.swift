@@ -66,7 +66,7 @@ class MapViewController: UIViewController {
             let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
             if fEvento! > Int(hoy)! {
                 
-                if a.1["latwgs84"] != nil {
+                if a.1["latwgs84"] != JSON.null {
                     print (a.1["latwgs84"] )
                     let artwork = Artwork(title: a.1["documentName"].string!,
                                           locationName: a.1["eventStartDate"].string!,
