@@ -80,14 +80,9 @@ class MapViewController: UIViewController {
 
         //end: descargar datos
 
-
         // set initial location in Honolulu
         let initialLocation = CLLocation(latitude: 43.1714635, longitude: -2.630595900000003)
         centerMapOnLocation(location: initialLocation)
-
-
-
-
 
     }
 
@@ -95,17 +90,6 @@ class MapViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -144,4 +128,3 @@ extension UIViewController: MKMapViewDelegate {
         }
     }
 }
-

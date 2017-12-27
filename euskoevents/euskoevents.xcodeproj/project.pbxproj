@@ -19,23 +19,6 @@
 		71F36F931FDDB61B0051320B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F36F921FDDB61B0051320B /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		7112C2BC1FDCB8EA00063716 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7112C29F1FDCB8EA00063716 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7112C2A61FDCB8EA00063716;
-			remoteInfo = EuskoEvents;
-		};
-		7112C2C71FDCB8EA00063716 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7112C29F1FDCB8EA00063716 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7112C2A61FDCB8EA00063716;
-			remoteInfo = EuskoEvents;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		38F43EF42025812EDDCF9091 /* Pods-EuskoEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EuskoEvents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EuskoEvents/Pods-EuskoEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		41BB130E621D6A29721AB29A /* Pods-EuskoEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EuskoEvents.release.xcconfig"; path = "Pods/Target Support Files/Pods-EuskoEvents/Pods-EuskoEvents.release.xcconfig"; sourceTree = "<group>"; };
@@ -48,8 +31,6 @@
 		7112C2B11FDCB8EA00063716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7112C2B41FDCB8EA00063716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7112C2B61FDCB8EA00063716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7112C2BB1FDCB8EA00063716 /* EuskoEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EuskoEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7112C2C61FDCB8EA00063716 /* EuskoEventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EuskoEventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7112C2D81FDCBD0500063716 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7197E37E1FE6C35000856CFC /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		71F36F921FDDB61B0051320B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -61,20 +42,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A488D57FE6B08CB1F67797F /* Pods_EuskoEvents.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7112C2B81FDCB8EA00063716 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7112C2C31FDCB8EA00063716 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				7112C2A71FDCB8EA00063716 /* EuskoEvents.app */,
-				7112C2BB1FDCB8EA00063716 /* EuskoEventsTests.xctest */,
-				7112C2C61FDCB8EA00063716 /* EuskoEventsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,42 +123,6 @@
 			productReference = 7112C2A71FDCB8EA00063716 /* EuskoEvents.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7112C2BA1FDCB8EA00063716 /* EuskoEventsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7112C2D21FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "EuskoEventsTests" */;
-			buildPhases = (
-				7112C2B71FDCB8EA00063716 /* Sources */,
-				7112C2B81FDCB8EA00063716 /* Frameworks */,
-				7112C2B91FDCB8EA00063716 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7112C2BD1FDCB8EA00063716 /* PBXTargetDependency */,
-			);
-			name = EuskoEventsTests;
-			productName = EuskoEventsTests;
-			productReference = 7112C2BB1FDCB8EA00063716 /* EuskoEventsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		7112C2C51FDCB8EA00063716 /* EuskoEventsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7112C2D51FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "EuskoEventsUITests" */;
-			buildPhases = (
-				7112C2C21FDCB8EA00063716 /* Sources */,
-				7112C2C31FDCB8EA00063716 /* Frameworks */,
-				7112C2C41FDCB8EA00063716 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7112C2C81FDCB8EA00063716 /* PBXTargetDependency */,
-			);
-			name = EuskoEventsUITests;
-			productName = EuskoEventsUITests;
-			productReference = 7112C2C61FDCB8EA00063716 /* EuskoEventsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,16 +136,6 @@
 					7112C2A61FDCB8EA00063716 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-					};
-					7112C2BA1FDCB8EA00063716 = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 7112C2A61FDCB8EA00063716;
-					};
-					7112C2C51FDCB8EA00063716 = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 7112C2A61FDCB8EA00063716;
 					};
 				};
 			};
@@ -234,8 +153,6 @@
 			projectRoot = "";
 			targets = (
 				7112C2A61FDCB8EA00063716 /* EuskoEvents */,
-				7112C2BA1FDCB8EA00063716 /* EuskoEventsTests */,
-				7112C2C51FDCB8EA00063716 /* EuskoEventsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,20 +165,6 @@
 				7112C2B51FDCB8EA00063716 /* LaunchScreen.storyboard in Resources */,
 				7112C2B21FDCB8EA00063716 /* Assets.xcassets in Resources */,
 				7112C2B01FDCB8EA00063716 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7112C2B91FDCB8EA00063716 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7112C2C41FDCB8EA00063716 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,11 +197,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EuskoEvents/Pods-EuskoEvents-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,34 +242,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7112C2B71FDCB8EA00063716 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7112C2C21FDCB8EA00063716 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7112C2BD1FDCB8EA00063716 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7112C2A61FDCB8EA00063716 /* EuskoEvents */;
-			targetProxy = 7112C2BC1FDCB8EA00063716 /* PBXContainerItemProxy */;
-		};
-		7112C2C81FDCB8EA00063716 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7112C2A61FDCB8EA00063716 /* EuskoEvents */;
-			targetProxy = 7112C2C71FDCB8EA00063716 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7112C2AE1FDCB8EA00063716 /* Main.storyboard */ = {
@@ -525,68 +403,6 @@
 			};
 			name = Release;
 		};
-		7112C2D31FDCB8EA00063716 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = EuskoEventsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = asier.EuskoEventsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EuskoEvents.app/EuskoEvents";
-			};
-			name = Debug;
-		};
-		7112C2D41FDCB8EA00063716 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = EuskoEventsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = asier.EuskoEventsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EuskoEvents.app/EuskoEvents";
-			};
-			name = Release;
-		};
-		7112C2D61FDCB8EA00063716 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = EuskoEventsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = asier.EuskoEventsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EuskoEvents;
-			};
-			name = Debug;
-		};
-		7112C2D71FDCB8EA00063716 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = EuskoEventsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = asier.EuskoEventsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EuskoEvents;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -604,24 +420,6 @@
 			buildConfigurations = (
 				7112C2D01FDCB8EA00063716 /* Debug */,
 				7112C2D11FDCB8EA00063716 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7112C2D21FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "EuskoEventsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7112C2D31FDCB8EA00063716 /* Debug */,
-				7112C2D41FDCB8EA00063716 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7112C2D51FDCB8EA00063716 /* Build configuration list for PBXNativeTarget "EuskoEventsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7112C2D61FDCB8EA00063716 /* Debug */,
-				7112C2D71FDCB8EA00063716 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

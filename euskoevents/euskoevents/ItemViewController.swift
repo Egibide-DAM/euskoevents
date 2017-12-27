@@ -8,33 +8,48 @@
 
 import UIKit
 import SwiftyJSON
+import Eureka
+import SafariServices
 
-class ItemViewController: UIViewController {
+class ItemViewController: FormViewController {
+
     var json: JSON?
     var elemento = [JSON.Element]()
     var url: URL?
 
-    @IBOutlet weak var nombre: UILabel!
-    @IBOutlet weak var fecha: UILabel!
-    @IBOutlet weak var territorio: UILabel!
-    @IBOutlet weak var botonWeb: UIButton!
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        nombre.text = elemento.first?.1["documentName"].string
-        fecha.text = elemento.first?.1["eventStartDate"].string
-        if (elemento.first?.1["eventEndDate"].string != elemento.first?.1["eventStartDate"].string) {
-            fecha.text = (fecha.text)! + " - " + (elemento.first?.1["eventEndDate"].string)!
+        form +++ Section("Detalles")
+        <<< LabelRow() {
+            $0.title = "Fecha"
+            $0.value = elemento.first?.1["eventStartDate"].string
+            if (elemento.first?.1["eventEndDate"].string != elemento.first?.1["eventStartDate"].string) {
+                $0.value = $0.value! + " - " + (elemento.first?.1["eventEndDate"].string)!
+            }
         }
-        territorio.text = elemento.first?.1["TerritoriohistoricoNombre"].string
+        <<< LabelRow() { row in
+            row.title = "Título"
+            row.value = elemento.first?.1["documentName"].string
+
+            // REF: Etiquetas multilínea: https://stackoverflow.com/a/38095587/5136913
+            row.cell.detailTextLabel?.numberOfLines = 0
+        }
+        <<< LabelRow() { row in
+            row.title = "Provincias"
+            row.value = elemento.first?.1["TerritoriohistoricoNombre"].string
+        }
         if (elemento.first?.1["friendlyUrl"] != nil) {
             url = (elemento.first?.1["friendlyUrl"].url!)!
-            botonWeb.isEnabled = true
-
-        } else {
-            print("Disable botonWeb")
-            botonWeb.isEnabled = false
+            form
+                +++ Section("Información adicional")
+            <<< ButtonRow { row in
+                row.title = "Ver en la web"
+            }.onCellSelection { cell, row in
+                // REF: Mostrar la URL en un navegador integrado: https://stackoverflow.com/a/46729252/5136913
+                let vc = SFSafariViewController(url: self.url!)
+                self.present(vc, animated: true, completion: nil)
+            }
         }
 
     }
@@ -43,19 +58,5 @@ class ItemViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func irWeb(_ sender: Any) {
-        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
