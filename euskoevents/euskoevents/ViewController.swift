@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         let url = "http://opendata.euskadi.eus/contenidos/ds_eventos/eventos_turisticos/opendata/agenda.json"
 
         // No podemos usar .responseJSON(), porque no es un JSON válido
+        // REF: El formato que usa es JSONP: https://es.wikipedia.org/wiki/JSONP
         Alamofire.request(url, method: .get).validate().responseString { response in
             switch response.result {
             case .success(let value):
