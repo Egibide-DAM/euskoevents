@@ -218,13 +218,16 @@
                             <rect key="frame" x="117" y="7" width="141" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="Todos"/>
                                 <segment title="Próximos"/>
+                                <segment title="Todos"/>
                             </segments>
+                            <connections>
+                                <action selector="selector:" destination="bi7-K9-k4j" eventType="valueChanged" id="ABr-LF-FIl"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
-                        <outlet property="btnAraba" destination="HyC-GS-NF6" id="Mor-99-qaa"/>
+                        <outlet property="selectorProximos" destination="at0-ca-ON8" id="w6T-Hb-gwg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NwH-2H-R5K" userLabel="First Responder" sceneMemberID="firstResponder"/>

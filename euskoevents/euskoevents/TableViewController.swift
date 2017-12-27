@@ -13,11 +13,9 @@ import SwiftyJSON
 class TableViewController: UITableViewController {
 
     var tipoTabla: String!
-    var odernado = [JSON.Element]()
-    var odernadoPorFecha = [JSON.Element]()
+    var lista = [Evento]()
 
-    // Objeto de SwiftyJSON
-    var json: JSON?
+    var odernadoPorFecha = [JSON.Element]()
 
     override func viewDidLoad() {
 
@@ -27,54 +25,44 @@ class TableViewController: UITableViewController {
         self.navigationItem.title = self.tipoTabla!
 
         // Que día es hoy?
-        let formatter: DateFormatter = DateFormatter()
-        formatter.dateFormat = "yyyyMdd"
-        let hoy: String = formatter.string(from: NSDate.init(timeIntervalSinceNow: 0) as Date)
+        let hoy = Date()
 
-        // Filtrar dependiendo de lo solicitado
-        self.odernadoPorFecha = (self.json?.sorted(by: { $0.1["Fechainicioeventosinformato"] < $1.1["Fechainicioeventosinformato"] }))!
-        for a in self.odernadoPorFecha {
-            if self.tipoTabla == "Todos" {
-                self.odernado.append(a)
-            }
-            if self.tipoTabla == "Proximos" {
-                let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
-                if fEvento! > Int(hoy)! {
-                    self.odernado.append(a)
-                }
-
-            }
-            if self.tipoTabla == "Araba" {
-                let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
-                if fEvento! > Int(hoy)! {
-                    if a.1["TerritoriohistoricoNombre"].string?.range(of: "ALAVA") != nil {
-                        self.odernado.append(a)
-                    }
-                }
-
-            }
-            if self.tipoTabla == "Bizkaia" {
-                let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
-                if fEvento! > Int(hoy)! {
-                    if a.1["TerritoriohistoricoNombre"].string?.range(of: "BIZKAIA") != nil {
-                        self.odernado.append(a)
-                    }
-                }
-
-            }
-            if self.tipoTabla == "Gipuzkoa" {
-                let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
-                if fEvento! > Int(hoy)! {
-                    if a.1["TerritoriohistoricoNombre"].string?.range(of: "GIPUZKOA") != nil {
-                        self.odernado.append(a)
-                    }
+        // Filtrar dependiendo de lo solicitado (ya están ordenados por fecha)
+        var todos = [Evento]()
+        if(soloProximosEventos) {
+            for e in eventos {
+                if(e.fechaInicio > hoy) {
+                    todos.append(e)
                 }
             }
+        } else {
+            todos = eventos
         }
 
-
-        //self.odernado = (self.json?.sorted(by: {$0.1["TerritoriohistoricoNombre"] < $1.1["TerritoriohistoricoNombre"]}))!
-
+        switch self.tipoTabla {
+        case "Todos":
+            lista = todos
+        case "Araba":
+            for e in todos {
+                if(e.provincias.contains("ALAVA")) {
+                    lista.append(e)
+                }
+            }
+        case "Bizkaia":
+            for e in todos {
+                if(e.provincias.contains("BIZKAIA")) {
+                    lista.append(e)
+                }
+            }
+        case "Gipuzkoa":
+            for e in todos {
+                if(e.provincias.contains("GIPUZKOA")) {
+                    lista.append(e)
+                }
+            }
+        default:
+            self.lista = todos
+        }
 
         // Pedir la recarga de la tabla
         self.tableView.reloadData()
@@ -89,31 +77,31 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         // Si no hay datos, no hay filas
-        return odernado.count
+        return lista.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-//        let formatter : DateFormatter = DateFormatter();
-//        formatter.dateFormat = "yyyyMdd";
-//        let hoy : String = formatter.string(from: NSDate.init(timeIntervalSinceNow: 0) as Date);
-
-
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! CeldaTableViewCell
 
-        celda.fecha.text = odernado[indexPath.row].1["eventStartDate"].string!
-        celda.titulo.text = odernado[indexPath.row].1["documentName"].string!
-        celda.provincias.text = odernado[indexPath.row].1["TerritoriohistoricoNombre"].string!
+        let evento = lista[indexPath.row]
+
+        let dateFmt = DateFormatter()
+        dateFmt.dateFormat = "dd/MM/yyyy"
+
+        celda.fecha.text = dateFmt.string(from: evento.fechaInicio)
+        celda.titulo.text = evento.titulo
+        celda.provincias.text = evento.provincias
 
         return celda
     }
 
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "verItem") {
             let destino = segue.destination as! ItemViewController
-            destino.elemento = [odernado[(self.tableView.indexPathForSelectedRow?.item)!]]
+            destino.evento = lista[(self.tableView.indexPathForSelectedRow?.row)!]
         }
     }
+
 }
 
