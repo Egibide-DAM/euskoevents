@@ -18,16 +18,16 @@ class Artwork: NSObject, MKAnnotation {
     let locationName: String
     let discipline: String
     let coordinate: CLLocationCoordinate2D
-    
+
     init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D, numero: Int) {
         self.title = title
         self.locationName = locationName
         self.discipline = discipline
         self.coordinate = coordinate
-        
+
         super.init()
     }
-    
+
     var subtitle: String? {
         return locationName
     }
@@ -46,28 +46,26 @@ class MapViewController: UIViewController {
                                                                   regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         mapView.delegate = self
 
-
         // Que día es hoy?
-        let formatter : DateFormatter = DateFormatter();
-        formatter.dateFormat = "yyyyMdd";
-        let hoy : String = formatter.string(from: NSDate.init(timeIntervalSinceNow: 0) as Date);
-        
-        
+        let formatter: DateFormatter = DateFormatter()
+        formatter.dateFormat = "yyyyMdd"
+        let hoy: String = formatter.string(from: NSDate.init(timeIntervalSinceNow: 0) as Date)
+
         // no es necesario ordenar
-        self.odernadoPorFecha = (self.json?.sorted(by: {$0.1["Fechainic2oeventosinformato"] < $1.1["Fechainicioeventosinformato"]}))!
+        self.odernadoPorFecha = (self.json?.sorted(by: { $0.1["Fechainic2oeventosinformato"] < $1.1["Fechainicioeventosinformato"] }))!
         var cuenta = 0
-        for a in self.odernadoPorFecha{
+        for a in self.odernadoPorFecha {
             let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
             if fEvento! > Int(hoy)! {
-                
+
                 if a.1["latwgs84"] != JSON.null {
-                    print (a.1["latwgs84"] )
+                    print (a.1["latwgs84"])
                     let artwork = Artwork(title: a.1["documentName"].string!,
                                           locationName: a.1["eventStartDate"].string!,
                                           discipline: "Sculpture",
@@ -79,16 +77,16 @@ class MapViewController: UIViewController {
             }
             cuenta = cuenta + 1
         }
-        
+
         //end: descargar datos
-        
+
 
         // set initial location in Honolulu
         let initialLocation = CLLocation(latitude: 43.1714635, longitude: -2.630595900000003)
         centerMapOnLocation(location: initialLocation)
 
-        
-        
+
+
 
 
     }
@@ -97,7 +95,7 @@ class MapViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation
@@ -136,11 +134,11 @@ extension UIViewController: MKMapViewDelegate {
         return view
     }
     public func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        if control == view.rightCalloutAccessoryView{
+        if control == view.rightCalloutAccessoryView {
             // TODO: Ir a evento
             //print(mapView.selectedAnnotations.first)
-            
-           
+
+
             print("PULSADO") // your annotation's title
             //Perform a segue here to navigate to another viewcontroller
         }

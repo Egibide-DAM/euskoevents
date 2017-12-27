@@ -6,11 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--EuskoEvents-->
+        <!--Listado-->
         <scene sceneID="IRf-83-8S6">
             <objects>
                 <tableViewController id="aZt-FW-bXe" customClass="TableViewController" customModule="EuskoEvents" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,14 +21,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celda" id="CF8-zR-ezT">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="celda" rowHeight="164" id="CF8-zR-ezT" customClass="CeldaTableViewCell" customModule="EuskoEvents" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="164"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CF8-zR-ezT" id="lUD-cW-8jK">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="163.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="59L-cA-7kp">
+                                            <rect key="frame" x="16" y="11" width="317" height="142"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31/12/2017 - 01/01/2018" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6a-Qe-cWN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="317" height="14.333333333333334"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título del evento Título del evento Título del evento Título del evento " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="rPY-tU-sp1">
+                                                    <rect key="frame" x="0.0" y="46" width="317" height="52.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="ARABA GIPUZKOA BIZKAIA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcs-we-SCd">
+                                                    <rect key="frame" x="0.0" y="130" width="317" height="12"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                    <color key="textColor" red="0.54117647059999996" green="0.53333333329999999" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="59L-cA-7kp" secondAttribute="trailing" id="EaA-je-ysK"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="59L-cA-7kp" secondAttribute="bottom" id="Gc1-81-WhV"/>
+                                        <constraint firstItem="59L-cA-7kp" firstAttribute="leading" secondItem="lUD-cW-8jK" secondAttribute="leadingMargin" id="HAR-g0-6xb"/>
+                                        <constraint firstItem="59L-cA-7kp" firstAttribute="top" secondItem="lUD-cW-8jK" secondAttribute="topMargin" id="KoX-lt-FQK"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="fecha" destination="u6a-Qe-cWN" id="K8W-pR-tfV"/>
+                                    <outlet property="provincias" destination="bcs-we-SCd" id="qZZ-of-fW8"/>
+                                    <outlet property="titulo" destination="rPY-tU-sp1" id="ysj-hB-anB"/>
                                     <segue destination="f9z-xs-caH" kind="show" identifier="verItem" id="RiS-Fk-o4E"/>
                                 </connections>
                             </tableViewCell>
@@ -36,7 +72,7 @@
                             <outlet property="delegate" destination="aZt-FW-bXe" id="dSp-Jy-OLB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="EuskoEvents" id="hp2-4W-A48"/>
+                    <navigationItem key="navigationItem" title="Listado" id="hp2-4W-A48"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="jYt-r8-aFO" id="9BZ-H2-Q8W"/>
                     </connections>
@@ -51,26 +87,26 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="898" y="177"/>
+            <point key="canvasLocation" x="896.79999999999995" y="176.60098522167488"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Mapa-->
         <scene sceneID="5eh-yS-Fqp">
             <objects>
-                <viewController id="Sc0-vx-P4N" customClass="MapViewController" customModule="EuskoEvents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Mapa" id="Sc0-vx-P4N" customClass="MapViewController" customModule="EuskoEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UuI-tW-Hxx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-l1-k62">
-                                <rect key="frame" x="0.0" y="116" width="375" height="364"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-l1-k62">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wGh-l1-k62" firstAttribute="bottom" secondItem="h8Y-0h-T08" secondAttribute="bottom" id="EH4-YG-dW5"/>
-                            <constraint firstItem="wGh-l1-k62" firstAttribute="top" secondItem="h8Y-0h-T08" secondAttribute="top" id="RpP-Xt-s3H"/>
-                            <constraint firstItem="wGh-l1-k62" firstAttribute="leading" secondItem="h8Y-0h-T08" secondAttribute="leading" id="UF3-3u-6nR"/>
-                            <constraint firstItem="wGh-l1-k62" firstAttribute="trailing" secondItem="h8Y-0h-T08" secondAttribute="trailing" id="mh7-za-we4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="wGh-l1-k62" secondAttribute="bottom" id="GfV-jx-wRh"/>
+                            <constraint firstItem="wGh-l1-k62" firstAttribute="top" secondItem="UuI-tW-Hxx" secondAttribute="top" id="hkS-NR-nLr"/>
+                            <constraint firstItem="wGh-l1-k62" firstAttribute="leading" secondItem="UuI-tW-Hxx" secondAttribute="leading" id="hyY-pV-Dyt"/>
+                            <constraint firstAttribute="trailing" secondItem="wGh-l1-k62" secondAttribute="trailing" id="tKc-Be-mgH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h8Y-0h-T08"/>
                     </view>
@@ -80,12 +116,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQb-Re-NV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893.60000000000002" y="964.76761619190415"/>
+            <point key="canvasLocation" x="893.60000000000002" y="964.28571428571433"/>
         </scene>
-        <!--Item View Controller-->
+        <!--Evento-->
         <scene sceneID="aHf-Eg-zEs">
             <objects>
-                <viewController id="f9z-xs-caH" customClass="ItemViewController" customModule="EuskoEvents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Evento" id="f9z-xs-caH" customClass="ItemViewController" customModule="EuskoEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TZt-SO-yUb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,13 +166,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tcn-up-ERx">
                                         <rect key="frame" x="0.0" y="40.666666666666657" width="375" height="20.333333333333329"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Territorio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiR-ZF-ayZ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Territorio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiR-ZF-ayZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="333.33333333333331" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOx-Ky-HPQ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOx-Ky-HPQ">
                                                 <rect key="frame" x="333.33333333333331" y="0.0" width="41.666666666666686" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -146,7 +182,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pP-Z4-ACO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pP-Z4-ACO">
                                 <rect key="frame" x="16" y="255" width="343" height="30"/>
                                 <state key="normal" title="Ver en la Web"/>
                                 <connections>
@@ -156,6 +192,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="4pP-Z4-ACO" firstAttribute="top" secondItem="bOx-Ky-HPQ" secondAttribute="bottom" constant="54" id="31w-Lg-uIl"/>
                             <constraint firstItem="zI0-dd-dUA" firstAttribute="top" secondItem="WVa-gP-Yv3" secondAttribute="top" id="IK7-tw-qef"/>
                             <constraint firstItem="WVa-gP-Yv3" firstAttribute="trailing" secondItem="zI0-dd-dUA" secondAttribute="trailing" id="MdC-34-ayC"/>
                             <constraint firstItem="4pP-Z4-ACO" firstAttribute="leading" secondItem="WVa-gP-Yv3" secondAttribute="leading" constant="16" id="XHb-Ni-PKD"/>

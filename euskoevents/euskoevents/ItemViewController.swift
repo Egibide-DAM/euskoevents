@@ -18,22 +18,17 @@ class ItemViewController: UIViewController {
     @IBOutlet weak var fecha: UILabel!
     @IBOutlet weak var territorio: UILabel!
     @IBOutlet weak var botonWeb: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // REF: Tamaño de la barra de navegación de iOS 11: https://chariotsolutions.com/blog/post/large-titles-ios-11/
-        navigationController?.navigationBar.prefersLargeTitles = false
-
-        self.navigationItem.title = elemento.first?.1["documentName"].string
 
         nombre.text = elemento.first?.1["documentName"].string
         fecha.text = elemento.first?.1["eventStartDate"].string
         if (elemento.first?.1["eventEndDate"].string != elemento.first?.1["eventStartDate"].string) {
-            fecha.text =  (fecha.text)! + " - " + (elemento.first?.1["eventEndDate"].string)!
+            fecha.text = (fecha.text)! + " - " + (elemento.first?.1["eventEndDate"].string)!
         }
         territorio.text = elemento.first?.1["TerritoriohistoricoNombre"].string
-        if (elemento.first?.1["friendlyUrl"] != nil){
+        if (elemento.first?.1["friendlyUrl"] != nil) {
             url = (elemento.first?.1["friendlyUrl"].url!)!
             botonWeb.isEnabled = true
 

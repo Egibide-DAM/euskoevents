@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A488D57FE6B08CB1F67797F /* Pods_EuskoEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CDA3D659F89F35C3DF6500 /* Pods_EuskoEvents.framework */; };
+		41E6FF4B1FF3CD84009FB8DD /* CeldaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E6FF4A1FF3CD84009FB8DD /* CeldaTableViewCell.swift */; };
 		7112C2AB1FDCB8EA00063716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7112C2AA1FDCB8EA00063716 /* AppDelegate.swift */; };
 		7112C2AD1FDCB8EA00063716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7112C2AC1FDCB8EA00063716 /* ViewController.swift */; };
 		7112C2B01FDCB8EA00063716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7112C2AE1FDCB8EA00063716 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		38F43EF42025812EDDCF9091 /* Pods-EuskoEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EuskoEvents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EuskoEvents/Pods-EuskoEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		41BB130E621D6A29721AB29A /* Pods-EuskoEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EuskoEvents.release.xcconfig"; path = "Pods/Target Support Files/Pods-EuskoEvents/Pods-EuskoEvents.release.xcconfig"; sourceTree = "<group>"; };
+		41E6FF4A1FF3CD84009FB8DD /* CeldaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaTableViewCell.swift; sourceTree = "<group>"; };
 		44CDA3D659F89F35C3DF6500 /* Pods_EuskoEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EuskoEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7112C2A71FDCB8EA00063716 /* EuskoEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuskoEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7112C2AA1FDCB8EA00063716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,8 +111,9 @@
 				7112C2B31FDCB8EA00063716 /* LaunchScreen.storyboard */,
 				7112C2B61FDCB8EA00063716 /* Info.plist */,
 				7112C2D81FDCBD0500063716 /* TableViewController.swift */,
-				71F36F921FDDB61B0051320B /* MapViewController.swift */,
+				41E6FF4A1FF3CD84009FB8DD /* CeldaTableViewCell.swift */,
 				7197E37E1FE6C35000856CFC /* ItemViewController.swift */,
+				71F36F921FDDB61B0051320B /* MapViewController.swift */,
 			);
 			path = EuskoEvents;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7112C2AD1FDCB8EA00063716 /* ViewController.swift in Sources */,
+				41E6FF4B1FF3CD84009FB8DD /* CeldaTableViewCell.swift in Sources */,
 				7112C2D91FDCBD0500063716 /* TableViewController.swift in Sources */,
 				7197E37F1FE6C35000856CFC /* ItemViewController.swift in Sources */,
 				7112C2AB1FDCB8EA00063716 /* AppDelegate.swift in Sources */,
