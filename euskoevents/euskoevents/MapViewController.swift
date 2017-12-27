@@ -8,21 +8,17 @@
 
 import UIKit
 
-import Alamofire
-import SwiftyJSON
-
 import MapKit
 
 class Artwork: NSObject, MKAnnotation {
+
     let title: String?
     let locationName: String
-    let discipline: String
     let coordinate: CLLocationCoordinate2D
 
-    init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D, numero: Int) {
+    init(title: String, locationName: String, coordinate: CLLocationCoordinate2D) {
         self.title = title
         self.locationName = locationName
-        self.discipline = discipline
         self.coordinate = coordinate
 
         super.init()
@@ -35,15 +31,13 @@ class Artwork: NSObject, MKAnnotation {
 }
 
 class MapViewController: UIViewController {
-    // Objeto de SwiftyJSON
-    var json: JSON?
-    var odernadoPorFecha = [JSON.Element]()
-    var mostrarMapa = [JSON.Element]()
+
     @IBOutlet weak var mapView: MKMapView!
+
     let regionRadius: CLLocationDistance = 100000
+
     func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-                                                                  regionRadius, regionRadius)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
 
@@ -53,34 +47,30 @@ class MapViewController: UIViewController {
         mapView.delegate = self
 
         // Que día es hoy?
-        let formatter: DateFormatter = DateFormatter()
-        formatter.dateFormat = "yyyyMdd"
-        let hoy: String = formatter.string(from: NSDate.init(timeIntervalSinceNow: 0) as Date)
+        let hoy = Date()
 
-        // no es necesario ordenar
-        self.odernadoPorFecha = (self.json?.sorted(by: { $0.1["Fechainic2oeventosinformato"] < $1.1["Fechainicioeventosinformato"] }))!
-        var cuenta = 0
-        for a in self.odernadoPorFecha {
-            let fEvento = Int(a.1["Fechainicioeventosinformato"].string!)
-            if fEvento! > Int(hoy)! {
+        let dateFmt = DateFormatter()
+        dateFmt.dateFormat = "dd/MM/yyyy"
 
-                if a.1["latwgs84"] != JSON.null {
-                    print (a.1["latwgs84"])
-                    let artwork = Artwork(title: a.1["documentName"].string!,
-                                          locationName: a.1["eventStartDate"].string!,
-                                          discipline: "Sculpture",
-                                          coordinate: CLLocationCoordinate2D(latitude: Double(a.1["latwgs84"].string!)!, longitude: Double(a.1["lonwgs84"].string!)!),
-                                          numero: cuenta
-                    )
+        for e in eventos {
+
+            if let latitud = e.latitud, let longitud = e.longitud {
+                let artwork = Artwork(title: e.titulo,
+                                      locationName: dateFmt.string(from: e.fechaInicio),
+                                      coordinate: CLLocationCoordinate2D(latitude: latitud, longitude: longitud)
+                )
+                if(soloProximosEventos) {
+                    if(e.fechaInicio > hoy) {
+                        self.mapView.addAnnotation(artwork)
+                    }
+                } else {
                     self.mapView.addAnnotation(artwork)
                 }
             }
-            cuenta = cuenta + 1
+
         }
 
-        //end: descargar datos
-
-        // set initial location in Honolulu
+        // Centrar el mapa
         let initialLocation = CLLocation(latitude: 43.1714635, longitude: -2.630595900000003)
         centerMapOnLocation(location: initialLocation)
 
@@ -94,35 +84,32 @@ class MapViewController: UIViewController {
 }
 
 extension UIViewController: MKMapViewDelegate {
-    // 1
+
     public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        // 2
+
         guard let annotation = annotation as? Artwork else { return nil }
-        // 3
+
         let identifier = "marker"
         var view: MKMarkerAnnotationView
         let button = UIButton(type: .detailDisclosure) as UIButton // button with info sign
 
-        // 4
-        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-            as? MKMarkerAnnotationView {
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
             dequeuedView.annotation = annotation
             view = dequeuedView
         } else {
-            // 5
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
             view.rightCalloutAccessoryView = button
         }
+
         return view
     }
+
     public func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
             // TODO: Ir a evento
             //print(mapView.selectedAnnotations.first)
-
-
             print("PULSADO") // your annotation's title
             //Perform a segue here to navigate to another viewcontroller
         }

@@ -61,7 +61,7 @@ class TableViewController: UITableViewController {
                 }
             }
         default:
-            self.lista = todos
+            lista = todos
         }
 
         // Pedir la recarga de la tabla

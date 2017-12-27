@@ -85,12 +85,11 @@ class ViewController: UIViewController {
                         eventosJSON.append(nuevoEvento)
                     }
 
-                    eventos = eventosJSON.sorted()
+                    eventos = eventosJSON.sorted()  // El evento adopta el protocolo Comparable
 
                 }
             case .failure(let error):
                 print(error)
-
             }
         }
     }
@@ -126,4 +125,3 @@ class ViewController: UIViewController {
     }
 
 }
-

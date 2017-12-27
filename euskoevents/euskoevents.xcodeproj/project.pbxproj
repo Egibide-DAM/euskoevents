@@ -75,13 +75,13 @@
 				7112C2AC1FDCB8EA00063716 /* ViewController.swift */,
 				7112C2AE1FDCB8EA00063716 /* Main.storyboard */,
 				7112C2B11FDCB8EA00063716 /* Assets.xcassets */,
-				7112C2B31FDCB8EA00063716 /* LaunchScreen.storyboard */,
-				7112C2B61FDCB8EA00063716 /* Info.plist */,
 				7112C2D81FDCBD0500063716 /* TableViewController.swift */,
 				41E6FF4A1FF3CD84009FB8DD /* CeldaTableViewCell.swift */,
 				7197E37E1FE6C35000856CFC /* ItemViewController.swift */,
 				71F36F921FDDB61B0051320B /* MapViewController.swift */,
 				41C958B31FF3F6A600B6D02E /* Evento.swift */,
+				7112C2B31FDCB8EA00063716 /* LaunchScreen.storyboard */,
+				7112C2B61FDCB8EA00063716 /* Info.plist */,
 			);
 			path = EuskoEvents;
 			sourceTree = "<group>";
