@@ -9,23 +9,30 @@
 import UIKit
 
 import MapKit
+import SafariServices
 
-class Artwork: NSObject, MKAnnotation {
+class Anotacion: NSObject, MKAnnotation {
 
-    let title: String?
-    let locationName: String
-    let coordinate: CLLocationCoordinate2D
+    let title: String? // MKAnnotation
+    let coordinate: CLLocationCoordinate2D // MKAnnotation
+    let fecha: String
+    let url: URL?
 
-    init(title: String, locationName: String, coordinate: CLLocationCoordinate2D) {
-        self.title = title
-        self.locationName = locationName
-        self.coordinate = coordinate
+    init(evento e: Evento) {
+
+        let dateFmt = DateFormatter()
+        dateFmt.dateFormat = "dd/MM/yyyy"
+
+        self.title = e.titulo
+        self.coordinate = CLLocationCoordinate2D(latitude: e.latitud!, longitude: e.longitud!)
+        self.fecha = dateFmt.string(from: e.fechaInicio)
+        self.url = e.url
 
         super.init()
     }
 
     var subtitle: String? {
-        return locationName
+        return fecha
     }
 
 }
@@ -49,22 +56,16 @@ class MapViewController: UIViewController {
         // Que día es hoy?
         let hoy = Date()
 
-        let dateFmt = DateFormatter()
-        dateFmt.dateFormat = "dd/MM/yyyy"
-
         for e in eventos {
 
-            if let latitud = e.latitud, let longitud = e.longitud {
-                let artwork = Artwork(title: e.titulo,
-                                      locationName: dateFmt.string(from: e.fechaInicio),
-                                      coordinate: CLLocationCoordinate2D(latitude: latitud, longitude: longitud)
-                )
+            if e.latitud != nil && e.longitud != nil {
+                let anotacion = Anotacion(evento: e)
                 if(soloProximosEventos) {
                     if(e.fechaInicio > hoy) {
-                        self.mapView.addAnnotation(artwork)
+                        self.mapView.addAnnotation(anotacion)
                     }
                 } else {
-                    self.mapView.addAnnotation(artwork)
+                    self.mapView.addAnnotation(anotacion)
                 }
             }
 
@@ -87,7 +88,7 @@ extension UIViewController: MKMapViewDelegate {
 
     public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
 
-        guard let annotation = annotation as? Artwork else { return nil }
+        guard let annotation = annotation as? Anotacion else { return nil }
 
         let identifier = "marker"
         var view: MKMarkerAnnotationView
@@ -100,18 +101,24 @@ extension UIViewController: MKMapViewDelegate {
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
-            view.rightCalloutAccessoryView = button
+            if annotation.url != nil {
+                view.rightCalloutAccessoryView = button
+            }
         }
 
         return view
     }
 
     public func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+
         if control == view.rightCalloutAccessoryView {
-            // TODO: Ir a evento
-            //print(mapView.selectedAnnotations.first)
-            print("PULSADO") // your annotation's title
-            //Perform a segue here to navigate to another viewcontroller
+
+            let anotacion = view.annotation as! Anotacion
+
+            if let url = anotacion.url {
+                let vc = SFSafariViewController(url: url)
+                self.present(vc, animated: true, completion: nil)
+            }
         }
     }
 }
